@@ -1,2 +1,2 @@
 # CPSC362-Project
-A website that gives random cat facts
+A website that recommends which cat breed is best for you!
