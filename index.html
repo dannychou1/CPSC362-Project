@@ -1,17 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cat Breed Recommendation App</title>
-     <link href="styles.css" rel="stylesheet"/>
-     <!--makes the styling of the page similar on mobile as it is on desktop:-->
-     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
-<body>
-    <header>
-        <h1>Which Cat Breed Is Best For You?</h1>
-        <p class="summary">Take our quiz to find out which cat is sutible for you!</p>
-    </header>
-</body>
-</html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cat Breeds</title>
+        <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    </head>
+    <body>
+        <div class="container">
+            <header class="App-header">
+                <img
+                    src="https://bestanimations.com/Animals/Mammals/Cats/cats/cute-kitty-animated-gif-12.gif"
+                    alt="cat sleeping gif" class="cat-sleeping-gif" />
+                <h1>Cat Breeds</h1>
+                <h2> Discover cat breeds from around the world and get
+                    help finding your perfect pet</h2>
+                <h3>Which Cat Breed Is Best For You?</h3>
+                <p class="summary">Explore Our Cat Breed Library and Discover
+                    Your Perfect Feline Companion!</p>
+            </header>
+        </div>
+
+        <div class="cat-breed-container">
+            <!-- Replace with your cat breed boxes -->
+            <a href="siamese.html" class="cat-breed-box-link">
+                <!-- Link to a Siamese cat page -->
+                <div class="cat-breed-box">
+                    <img src="images/siamese.jpg" alt="Siamese"
+                        class="cat-breed-image" />
+                    <h3>Siamese</h3>
+                    <p>The Siamese cat is known for its striking appearance and
+                        vocal personality.</p>
+                </div>
+                <a href="siamese.html" class="cat-breed-box-link">
+                    <!-- Link to a Siamese cat page -->
+                    <div class="cat-breed-box">
+                        <img src="images/siamese.jpg" alt="Siamese"
+                            class="cat-breed-image" />
+                        <h3>Siamese</h3>
+                        <p>The Siamese cat is known for its striking appearance
+                            and vocal personality.</p>
+                    </div>
+                    <a href="other_breed.html" class="cat-breed-box-link">
+                        <!-- Link to another breed's page -->
+                        <div class="cat-breed-box">
+                            <img src="images/other_breed.jpg" alt="Other Breed"
+                                class="cat-breed-image" />
+                            <h3>Other Breed</h3>
+                            <p>Description of another cat breed.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="cat-breed-container">
+                <!-- Replace with your cat breed boxes -->
+                <a href="siamese.html" class="cat-breed-box-link">
+                    <!-- Link to a Siamese cat page -->
+                    <div class="cat-breed-box">
+                        <img src="images/siamese.jpg" alt="Siamese"
+                            class="cat-breed-image" />
+                        <h3>Siamese</h3>
+                        <p>The Siamese cat is known for its striking
+                            appearance and vocal personality.</p>
+                    </div>
+                </a>
+                <!-- Add more cat breed boxes here -->
+                <a href="other_breed.html" class="cat-breed-box-link">
+                    <!-- Link to another breed's page -->
+                    <div class="cat-breed-box">
+                        <img src="images/other_breed.jpg" alt="Other Breed"
+                            class="cat-breed-image" />
+                        <h3>Other Breed</h3>
+                        <p>Description of another cat breed.</p>
+                    </div>
+                </a>
+                <!-- Add more cat breed boxes here -->
+            </div>
+
+            <script src="script.js"></script>
+        </body>
+    </html>
