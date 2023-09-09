@@ -61,3 +61,15 @@
     flex-direction: column;
     align-items: center;
 }
+
+
+.svelte-app-frame {
+    width: 100%; /* Adjust the width as needed */
+    height: 700px; /* Adjust the height as needed */
+    border: none; /* Remove the default border */
+}
+
+
+
+
+
