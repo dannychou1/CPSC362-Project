@@ -1,0 +1,75 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* This will make the container take the full viewport height */
+    background-color: #f0f0f0;
+    /* Optional background color for the entire page */
+}
+
+.App-header {
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.cat-sleeping-gif {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+}
+
+
+
+
+
+.cat-breed-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.cat-breed-box {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.2s;
+}
+
+.cat-breed-box:hover {
+    transform: scale(1.05);
+}
+
+.cat-breed-image {
+    width: 100px;
+    /* Adjust the width as needed */
+    height: auto;
+    /* Let the height adjust proportionally */
+    border-radius: 50%;
+}
+
+.cat-breed-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.svelte-app-frame {
+    width: 100%; /* Adjust the width as needed */
+    height: 700px; /* Adjust the height as needed */
+    border: none; /* Remove the default border */
+}
+
+
+
+
+
