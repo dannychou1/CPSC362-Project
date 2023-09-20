@@ -1,4 +1,4 @@
-.container {
+/* .container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,7 +6,23 @@
     /* This will make the container take the full viewport height */
     background-color: #f0f0f0;
     /* Optional background color for the entire page */
-}
+} */
+
+
+
+.container {
+    
+
+    transition: background 0.3s, color 0.3s;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #bd2bfc, #f5c1a0);
+    font-family: 'Andada Pro', serif;
+    color: rgb(57, 57, 57);
+} 
+
+
+
 
 .App-header {
     text-align: center;
@@ -114,12 +130,7 @@
     top: 11px;
     left: 705px;
 } 
-   /* p {  
-    font-size: 16px;  
-    color: white;  
-    /* text-align: right;*/
-   }   */
-
+  
 
    .footer {  
     position: fixed;  
@@ -302,20 +313,34 @@
 
  /* Add other styles before dark mode styles if needed */
 
+
+
 body {
+    transition: background 0.3s, color 0.3s;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #bd2bfc, #f5c1a0);
+    font-family: 'Andada Pro', serif;
+    color: rgb(57, 57, 57);
+} 
+
+/* body {
     transition: 0.3s;
     margin: 0;
     padding: 0;
     background-color: rgb(241, 239, 239);
     font-family: 'Andada Pro', serif;
     color: rgb(57, 57, 57);
-}
-
-/* Add other styles after the body styles if needed */
+} */
 
 body.dark {
-    /* Dark mode styles go here */
-    background-color: #222;
+    background: linear-gradient(to bottom, #222, #333);
     color: #fff;
     /* Add other dark mode styles as needed */
+}
+
+/* Add a style for text in dark mode */
+body.dark .cat-breed-box h3,
+body.dark .cat-breed-box p {
+    color: #fff; /* Text color set to white in dark mode */
 }
