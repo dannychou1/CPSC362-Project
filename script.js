@@ -1,8 +1,18 @@
-const catBreedsData = [
+
   // Add your cat breed data here (same format as in your React app)
-];
+
+  const catBreedsData = [
+    {
+      breedName: 'Siamese Cat',
+      imageSrc: 'images/siamese.jpg',
+      description: 'siamese cats are gregarious, kind, intelligent, and family-oriented.',
+    },
+    // Add more cat breed data objects here
+  ];
+
 
 const appContainer = document.querySelector('.App');
+
 
 catBreedsData.forEach((breedData, index) => {
   const catBreedBox = document.createElement('a');
@@ -32,21 +42,20 @@ catBreedsData.forEach((breedData, index) => {
 });
 
 
-
-// meowGpt window integration
-const iframe = document.getElementById('svelteAppFrame');
-
-
-// Send a message to the iframe
-iframe.contentWindow.postMessage('Hello from the parent page!', 'https://your-vercel-app-url.com');
+// // meowGpt window integration
+// const iframe = document.getElementById('svelteAppFrame');
 
 
-// Listen for messages from the iframe
-window.addEventListener('message', (event) => {
-  if (event.origin === 'https://your-vercel-app-url.com') {
-    console.log('Received message from iframe:', event.data);
-  }
-});
+// // Send a message to the iframe
+// iframe.contentWindow.postMessage('Hello from the parent page!', 'https://your-vercel-app-url.com');
+
+
+// // Listen for messages from the iframe
+// window.addEventListener('message', (event) => {
+//   if (event.origin === 'https://your-vercel-app-url.com') {
+//     console.log('Received message from iframe:', event.data);
+//   }
+// });
 
 
 

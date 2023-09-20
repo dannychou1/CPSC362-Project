@@ -21,19 +21,28 @@
 }
 
 
-
-
-
 .cat-breed-container {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap; /* Allow boxes to wrap to the next line on smaller screens */
+}
+
+
+
+
+
+
+.cat-breed-box:hover {
+    transform: scale(1.05);
 }
 
 .cat-breed-box {
     width: 300px;
     display: flex;
+    flex:1;
     flex-direction: column;
-    align-items: center;
+    justify-content: center; /* Vertically center-align content */
+    align-items: center; /* Horizontally center-align content */
     text-align: center;
     margin: 20px;
     padding: 20px;
@@ -44,15 +53,26 @@
     transition: transform 0.2s;
 }
 
-.cat-breed-box:hover {
-    transform: scale(1.05);
+
+
+
+/* Add media queries for smaller screens */
+@media screen and (max-width: 768px) {
+    .cat-breed-container {
+        flex-wrap: wrap; /* Allow boxes to wrap to the next line on smaller screens */
+    }
+
+    .cat-breed-box {
+        flex: 0 0 calc(50% - 20px); /* Two boxes per row with some margin in between */
+        margin: 10px; /* Add spacing between boxes */
+    }
 }
+
+
 
 .cat-breed-image {
     width: 100px;
-    /* Adjust the width as needed */
     height: auto;
-    /* Let the height adjust proportionally */
     border-radius: 50%;
 }
 
