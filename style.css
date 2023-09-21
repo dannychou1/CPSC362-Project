@@ -3,9 +3,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* This will make the container take the full viewport height */
     background-color: #f0f0f0;
-    /* Optional background color for the entire page */
 } */
 
 
@@ -309,30 +307,7 @@
 
 
 
-
-
- /* Add other styles before dark mode styles if needed */
-
-
-
-/* body {
-    transition: background 0.3s, color 0.3s;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom, #bd2bfc, #f5c1a0);
-    font-family: 'Andada Pro', serif;
-    color: rgb(57, 57, 57);
-}  */
-
-/* body {
-    transition: 0.3s;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(241, 239, 239);
-    font-family: 'Andada Pro', serif;
-    color: rgb(57, 57, 57);
-} */
-
+   
 body.dark {
     background: linear-gradient(to bottom, #222, #333);
     color: #fff;
@@ -380,3 +355,27 @@ body.dark::before {
     /* Adjust the background for dark mode if needed */
     background: linear-gradient(to bottom, #222, #333);
 }
+
+
+
+ /* Add other styles before dark mode styles if needed */
+
+
+
+/* body {
+    transition: background 0.3s, color 0.3s;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #bd2bfc, #f5c1a0);
+    font-family: 'Andada Pro', serif;
+    color: rgb(57, 57, 57);
+}  */
+
+/* body {
+    transition: 0.3s;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(241, 239, 239);
+    font-family: 'Andada Pro', serif;
+    color: rgb(57, 57, 57);
+} */
