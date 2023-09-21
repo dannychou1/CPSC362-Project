@@ -9,15 +9,14 @@
 
 
 .container {
-    
-
+    /* Remove the existing background properties */
+    background: none;
     transition: background 0.3s, color 0.3s;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #bd2bfc, #f5c1a0);
     font-family: 'Andada Pro', serif;
     color: rgb(57, 57, 57);
-} 
+}
 
 
 
