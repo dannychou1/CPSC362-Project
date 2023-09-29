@@ -1,4 +1,4 @@
-/* ... (your existing CSS) ... */
+/* Styles for the main container holding the cat breed information and image */
 .cat-breed-container {
     display: flex;
     flex-direction: row-reverse; /* Updated to reverse the order */
@@ -7,6 +7,9 @@
     margin: auto;
     padding: 20px;
 }
+
+
+/* Styles for the container holding the cat image */
 
 .cat-image-container {
     flex: 1;
@@ -25,6 +28,7 @@
     transition: transform 0.3s ease-in-out;
 }
 
+/* Styles for the hover effect on the cat image container */
 .cat-image-container:hover {
     transform: translateY(-10px); /* Updated to lift the entire container */
     box-shadow: 0 12px 15px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
@@ -41,6 +45,7 @@
 
 
 
+/* Styles for the container holding the cat breed information */
 
 .cat-info-container {
     flex: 2;
@@ -56,6 +61,7 @@
     color: #333;
 }
 
+/* Styles for the cat breed information paragraph */
 .breed-info p {
     color: #333;
 }
@@ -93,6 +99,7 @@
 
 
 
+/* Styles for the facets container holding additional cat breed attributes */
 
 .facets-container {
     display: flex;
@@ -121,4 +128,221 @@
 
 .facet-box p {
     color: #333;
+}
+
+
+
+
+
+
+/* Styles for the list items in the "Need to Know" container */
+
+.need-to-know-container {
+    padding: 20px;
+    margin-top: 20px; /* Space between this container and the facets container */
+    border-radius: 10px;
+    background-color: #f0f0f0; /* Background color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.need-to-know-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.need-to-know-container ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.need-to-know-container li {
+    margin-bottom: 10px;
+    color: #333;
+    position: relative;
+    padding-left: 30px; /* Make space for the custom bullet point */
+}
+
+.need-to-know-container li:before {
+    content: ''; /* Updated to empty, we will use background-image instead */
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px; /* Adjust size as needed */
+    height: 20px; /* Adjust size as needed */
+    background-image: url('../images/cat.png'); /* Using background-image to control the size */
+    background-size: contain; /* This will ensure the icon fits within the dimensions */
+    background-repeat: no-repeat; /* This will prevent the icon from repeating */
+}
+
+
+
+
+
+
+/* Styles for the health information container */
+
+.health-info-container {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden; /* Keeps the border-radius effect when content expands */
+}
+
+.health-info-header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    cursor: pointer; /* Indicates the header is clickable */
+}
+
+.info-icon {
+    margin-right: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 50%; /* Makes the info icon circular */
+}
+
+.health-info-header h3 {
+    flex-grow: 1;
+}
+
+#toggle-icon {
+    margin-left: 10px;
+}
+
+.health-info-content {
+    display: none; /* Initially hidden */
+    padding: 20px;
+}
+
+.health-info-content p,
+.health-info-content ul {
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+/* Styles for the discover button in the intro section */
+
+.intro .logo-header .discover-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FFD700;
+    color: #000;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-top: 20px; /* Added space above the button */
+}
+
+/* Styles for the hover effect on the discover button */
+.intro .logo-header .discover-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+/* Styles for the personality container holding the cat image and personality information */
+
+.personality-container {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.cat-image-container {
+    flex: 1;
+    margin-right: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.cat-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.personality-info-container {
+    flex: 2;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.personality-info-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.personality-info-container p {
+    color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+/* Styles for the container holding the dropdown sections */
+
+.dropdowns-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Styles for the individual dropdown sections */
+.dropdown {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.red-font {
+    color: red;
+}
+
+/* Styles for the dropdown titles */
+
+.dropdown h3 {
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.dropdown-content {
+    display: none;
+    padding: 20px;
+}
+
+
+/* Styles for the paragraphs in the dropdown content */
+.dropdown-content p {
+    margin: 0;
 }

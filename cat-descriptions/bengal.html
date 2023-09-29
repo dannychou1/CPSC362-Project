@@ -21,9 +21,12 @@
                 <h4>
                     <span class="logo">Cat</span> <span class="logo">Breeds</span>
                 </h4>
-                <a href="#" class="button">Discover More</a> <!-- Added a button -->
+                <a href="../index.html" class="discover-button">Discover More</a> <!-- Updated class name -->
             </div>
         </div>
+        
+
+
         
         
         <div class="cat-breed-container">
@@ -57,6 +60,9 @@
         
     
 
+
+        
+
         <div class="facets-container">
             <div class="facet-box">
                 <h3>Temperament</h3>
@@ -74,7 +80,93 @@
 
 
 
-    <script src="script.js"></script>   
+
+
+        <div class="need-to-know-container">
+            <h2>The Need-to-Know</h2>
+            <ul>
+                <li>Great for first-time cat owners</li>
+                <li>Needs high-level of enrichment including simulated hunting games and interactive play</li>
+                <li>Playful and curious cat</li>
+                <li>Independent but friendly</li>
+            </ul>
+        </div>
+
+
+
+
+
+
+        
+<div class="health-info-container">
+    <div class="health-info-header" onclick="toggleHealthInfo()">
+        <i class="info-icon">i</i>
+        <h3>Generally Healthy Breed <span id="toggle-icon">+</span></h3>
+    </div>
+    <div class="health-info-content" id="health-info-content" style="display: none;">
+        <p>The Asian cat breed may be prone to:</p>
+        <ul>
+            <li>Hypokalaemia which is a condition where the levels of potassium in the blood are low which leads to weakness.</li>
+            <li>Polycystic kidney disease which is an inherited condition where cysts form in the kidneys. This affects kidney function and can eventually lead to kidney failure. However, it is worth noting that the risk of developing this disease in this breed is lower than in other cat breeds that are prone to the problem.</li>
+            <li>Burmese head defect which is a condition where the face and skull do not form correctly.</li>
+        </ul>
+        <p>Testing available:</p>
+        <p>DNA testing for hypokalaemia, polycystic kidney disease, and Burmese head defect which tests whether a cat has the potential to be affected by these conditions.</p>
+    </div>
+</div>
+
+
+
+
+
+
+<div class="personality-container">
+    <div class="cat-image-container">
+        <img src="../images/kitty.png" alt="Another Cat" class="cat-image">
+    </div>
+    
+    <div class="personality-info-container">
+        <h2>Personality</h2>
+        <p>
+            Outgoing, friendly and lively, the Asian is very much a ‘people’ cat, although they will get along well with other cats and household pets if raised with them. They are entertaining to play with, talkative but not too loud and will chat with owners if spoken to directly. In a calm or relaxed environment, they are an easy-going cat to live with, but can pick up on stress easily and particularly in multi-cat households, this can cause behaviour problems such as fighting, marking and inappropriate toileting.
+        </p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="dropdowns-container">
+
+    <div class="dropdown" onclick="toggleDropdown('vetRating')">
+        <h3 id="vetRating-title" class="red-font">Vet Rating <span id="vetRating-icon">+</span></h3>
+        <div class="dropdown-content" id="vetRating-content" style="display: none;">
+            <p>Content for Vet Rating.</p>
+        </div>
+    </div>
+
+    <!-- Repeat similar blocks for other titles -->
+    <div class="dropdown" onclick="toggleDropdown('historyOrigins')">
+        <h3 id="historyOrigins-title" class="red-font">History and Origins <span id="historyOrigins-icon">+</span></h3>
+        <div class="dropdown-content" id="historyOrigins-content" style="display: none;">
+            <p>Content for History and Origins.</p>
+        </div>
+    </div>
+
+    <!-- Add similar blocks for the rest of the titles -->
+    <!-- ... -->
+
+</div>
+
+
+
+
+    <script src="../script.js"></script>   
 
     </body>
 

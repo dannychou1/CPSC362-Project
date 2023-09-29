@@ -12,6 +12,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+// function for cat description generally healthy info drop down box
+function toggleHealthInfo() {
+  const content = document.getElementById('health-info-content');
+  const toggleIcon = document.getElementById('toggle-icon');
+  
+  if (content.style.display === 'block') {
+      content.style.display = 'none';
+      toggleIcon.textContent = '+';
+  } else {
+      content.style.display = 'block';
+      toggleIcon.textContent = '-';
+  }
+}
+
+
+
+
+// function for cat description drop down boxes
+function toggleDropdown(id) {
+  var content = document.getElementById(id + '-content');
+  var icon = document.getElementById(id + '-icon');
+  if (content.style.display === 'none') {
+      content.style.display = 'block';
+      icon.textContent = '-';
+  } else {
+      content.style.display = 'none';
+      icon.textContent = '+';
+  }
+}
+
+
+
+
+
 
 
 
