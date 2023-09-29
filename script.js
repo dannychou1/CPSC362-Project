@@ -34,16 +34,21 @@ $(document).ready(function() {
 
 // function for cat description drop down boxes
 function toggleDropdown(id) {
-  var content = document.getElementById(id + '-content');
-  var icon = document.getElementById(id + '-icon');
-  if (content.style.display === 'none') {
-      content.style.display = 'block';
-      icon.textContent = '-';
-  } else {
-      content.style.display = 'none';
-      icon.textContent = '+';
-  }
+    var content = $("#" + id + "-content");
+    var icon = $("#" + id + "-icon");
+
+    // Close all other dropdowns
+    $(".dropdown-content").not(content).slideUp(500);
+    $(".dropdown span").not(icon).text('+');
+
+    // Toggle the clicked dropdown
+    content.slideToggle(500, function() {
+        icon.text(content.is(':visible') ? '-' : '+');
+    });
 }
+
+
+
 
 
 

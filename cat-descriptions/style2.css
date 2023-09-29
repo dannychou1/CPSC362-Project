@@ -355,11 +355,34 @@
 
 .dropdown-content {
     display: none;
-    padding: 20px;
+    padding: 20px; /* Increase padding as needed */
+    border-top: 1px solid #ccc; /* Optional: add a border between the title and content */
 }
+
 
 
 /* Styles for the paragraphs in the dropdown content */
 .dropdown-content p {
     margin: 0;
+}
+
+
+
+
+
+
+/* Styles for the paragraphs in the dropdown content , vet rating*/
+
+.ratings-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.ratings-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.ratings-table tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
