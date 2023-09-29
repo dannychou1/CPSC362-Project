@@ -1,75 +1,124 @@
-/* can ignore this file for now, was trying to do an animation but havent got it to work yet. */
-
-
-/* Reset default margin and padding for all elements */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* ... (your existing CSS) ... */
+.cat-breed-container {
+    display: flex;
+    flex-direction: row-reverse; /* Updated to reverse the order */
+    align-items: center; /* Added to vertically center the items */
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
 }
 
-body {
-    font-family: "Poppins", sans-serif;
+.cat-image-container {
+    flex: 1;
+    margin-left: 20px; /* Updated to margin-left */
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Style for the header */
-header {
+.cat-image {
+    max-width: 300px; /* Added to limit the image width */
     width: 100%;
-    height: 80px;
-    text-align: center; /* Center-align the text horizontally */
-    background-color: #161616; /* Background color for the header */
-    color: white; /* Text color for the header */
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    height: auto; /* Added to maintain the aspect ratio */
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Style for the h4 element within the header */
-header h4 {
-    font-size: 1.6rem; /* Font size for the header text */
-    margin: 0;
-    padding: 1rem 0;
+.cat-image-container:hover {
+    transform: translateY(-10px); /* Updated to lift the entire container */
+    box-shadow: 0 12px 15px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
 }
 
-/* Style for the intro section */
-.intro {
-    position: fixed;
-    z-index: 0; /* Set a lower z-index to make it appear behind the header */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #161616;
-    transition: 1s;
-    color: white; /* Text color for the intro section */
+
+
+
+
+
+
+
+
+
+
+
+
+.cat-info-container {
+    flex: 2;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Style for the logo header within the intro section */
-.logo-header {
-    position: absolute;
-    top: 50%; /* Vertically center the logo header */
-    left: 50%; /* Horizontally center the logo header */
-    transform: translate(-50%, -50%);
+.breed-name {
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #333;
 }
 
-/* Style for the logo text */
-.logo {
-    display: inline-block;
-    margin: 0 10px; /* Add spacing between "Cat" and "Breeds" */
-    font-size: 1.6rem; /* Font size for the logo text */
+.breed-info p {
+    color: #333;
 }
 
-/* Animation for the logo text */
-.logo.active {
-    bottom: 0;
-    opacity: 1;
-    transition: ease-in-out 0.5s;
+.sidebar {
+    flex: 1;
+    margin-left: 20px;
 }
 
-/* Fade-out animation for the logo text */
-.logo.fade {
-    bottom: 150px;
-    opacity: 0;
-    transition: ease-in-out 0.5s;
+.info-box {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.info-box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.info-box ul {
+    list-style-type: none;
+}
+
+.info-box li {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+
+
+
+
+
+
+
+.facets-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #e0e0e0; /* Different color for this strip */
+    border-radius: 10px;
+    margin-top: 20px; /* Space between this container and the above content */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.facet-box {
+    flex: 1;
+    padding: 20px;
+    background-color: #f0f0f0; /* Pill box color */
+    border-radius: 20px; /* Pill shape */
+    margin: 0 10px; /* Space between pill boxes */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.facet-box h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.facet-box p {
+    color: #333;
 }
