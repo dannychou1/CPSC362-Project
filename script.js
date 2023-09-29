@@ -32,7 +32,7 @@ $(document).ready(function() {
 
 
 
-// function for cat description drop down boxes
+// function for cat description drop down boxes, vet rating
 function toggleDropdown(id) {
     var content = $("#" + id + "-content");
     var icon = $("#" + id + "-icon");
@@ -41,11 +41,13 @@ function toggleDropdown(id) {
     $(".dropdown-content").not(content).slideUp(500);
     $(".dropdown span").not(icon).text('+');
 
+    // Change the icon text immediately
+    icon.text(content.is(':visible') ? '+' : '-');
+
     // Toggle the clicked dropdown
-    content.slideToggle(500, function() {
-        icon.text(content.is(':visible') ? '-' : '+');
-    });
+    content.slideToggle(500);
 }
+
 
 
 
