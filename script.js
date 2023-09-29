@@ -57,22 +57,22 @@ function toggleDropdown(id) {
 
 
 // function for cursor
-$(document).ready(function() {
-    console.log('Document is ready');
-    var cursor = $('<div id="cursor"><img src="http://www.zingerbug.com/cursors/cursors/tuxedo_cat.gif" width="32" height="32" /></div>');
-    cursor.appendTo("body");
+// $(document).ready(function() {
+//     console.log('Document is ready');
+//     var cursor = $('<div id="cursor"><img src="http://www.zingerbug.com/cursors/cursors/tuxedo_cat.gif" width="32" height="32" /></div>');
+//     cursor.appendTo("body");
 
-    $(document).on('mousemove', function(e) {
-        console.log('Mouse is moving');
-        cursor.css({
-            left: e.pageX,
-            top: e.pageY,
-            position: 'absolute',
-            'z-index': '999999',
-            'pointer-events': 'none'
-        });
-    });
-});
+//     $(document).on('mousemove', function(e) {
+//         console.log('Mouse is moving');
+//         cursor.css({
+//             left: e.pageX,
+//             top: e.pageY,
+//             position: 'absolute',
+//             'z-index': '999999',
+//             'pointer-events': 'none'
+//         });
+//     });
+// });
 
 
 
