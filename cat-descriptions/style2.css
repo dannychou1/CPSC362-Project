@@ -183,16 +183,25 @@
 
 /* Styles for the health information container */
 
+/* Styles for the health information container */
 .health-info-container {
     margin-top: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
     overflow: hidden; /* Keeps the border-radius effect when content expands */
+    max-width: 33%; /* Limits the width to 1/3 of the parent container */
+    margin-left: 20px; /* Aligns the box to the left */
+}
+
+.health-info-header,
+.health-info-content {
+    text-align: center; /* Centers the text inside the header and content */
 }
 
 .health-info-header {
     display: flex;
     align-items: center;
+    justify-content: center; /* Centers the items horizontally */
     padding: 10px 20px;
     background-color: #f0f0f0;
     cursor: pointer; /* Indicates the header is clickable */
@@ -213,14 +222,22 @@
     margin-left: 10px;
 }
 
-.health-info-content {
-    display: none; /* Initially hidden */
-    padding: 20px;
-}
+
 
 .health-info-content p,
 .health-info-content ul {
     margin-bottom: 10px;
+}
+
+
+.health-info-content {
+    display: none; 
+    padding: 20px;
+}
+
+.health-info-content.expanded {
+    max-height: 1000px; /* Increased max-height */
+    padding: 20px; 
 }
 
 

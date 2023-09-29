@@ -12,19 +12,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-// function for cat description generally healthy info drop down box
-function toggleHealthInfo() {
-  const content = document.getElementById('health-info-content');
-  const toggleIcon = document.getElementById('toggle-icon');
-  
-  if (content.style.display === 'block') {
-      content.style.display = 'none';
-      toggleIcon.textContent = '+';
-  } else {
-      content.style.display = 'block';
-      toggleIcon.textContent = '-';
-  }
-}
+
+
+
+// jquery code, function for cat description generally healthy info drop down box
+
+$(document).ready(function() {
+  $('.health-info-header').click(function() {
+      $('#health-info-content').slideToggle(550); // 500ms for animation speed
+      var icon = $('#toggle-icon');
+      if (icon.text() === '+') {
+          icon.text('-');
+      } else {
+          icon.text('+');
+      }
+  });
+});
 
 
 
@@ -49,18 +52,34 @@ function toggleDropdown(id) {
 
 
 
- 
- 
- // Add your cat breed data here (same format as in your React app)
+ // // function for cat description generally healthy info drop down box
+// function toggleHealthInfo() {
+//   var content = document.getElementById('health-info-content');
+//   var icon = document.getElementById('toggle-icon');
 
-  const catBreedsData = [
-    {
-      breedName: 'Siamese Cat',
-      imageSrc: 'images/siamese.jpg',
-      description: 'siamese cats are gregarious, kind, intelligent, and family-oriented.',
-    },
-    // Add more cat breed data objects here
-  ];
+//   if (content.classList.contains('expanded')) {
+//       content.classList.remove('expanded');
+//       icon.textContent = '+';
+//   } else {
+//       content.classList.add('expanded');
+//       icon.textContent = '-';
+//   }
+// }
+
+
+
+
+ 
+//  // Add your cat breed data here (same format as in your React app)
+
+//   const catBreedsData = [
+//     {
+//       breedName: 'Siamese Cat',
+//       imageSrc: 'images/siamese.jpg',
+//       description: 'siamese cats are gregarious, kind, intelligent, and family-oriented.',
+//     },
+//     // Add more cat breed data objects here
+//   ];
 
 
 // const appContainer = document.querySelector('.App');
