@@ -1,11 +1,12 @@
 /* Styles for the main container holding the cat breed information and image */
 .cat-breed-container {
     display: flex;
-    flex-direction: row-reverse; /* Updated to reverse the order */
-    align-items: center; /* Added to vertically center the items */
+    flex-direction: row; 
+    align-items: center; 
     max-width: 1200px;
     margin: auto;
     padding: 20px;
+    gap: 20px; /* Added gap to create space between the boxes */
 }
 
 
@@ -53,7 +54,9 @@
     background-color: #f0f0f0;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; /* Added margin to the right */
 }
+
 
 .breed-name {
     margin-bottom: 20px;
