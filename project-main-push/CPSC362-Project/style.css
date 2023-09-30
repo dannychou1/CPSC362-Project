@@ -1,0 +1,228 @@
+/* Updated Styles */
+body {
+    background: #D1C4E9; /* Light Purple */
+    color: #333; /* Dark text for contrast */
+    font-family: 'Andada Pro', serif;
+    transition: background 0.3s, color 0.3s;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: linear-gradient(rgba(245, 238, 224, 0.7), rgba(245, 238, 224, 0.7)), url('./images/cat.jpg') no-repeat top center fixed; */
+    background: linear-gradient(rgb(245, 242, 235), rgba(0, 236, 16, 0.7)), no-repeat top center fixed;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.container {
+    background: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Andada Pro', serif;
+    color: #333;
+}
+
+.cat-breed-box {
+    border: 3px solid #000;
+    color: #000;
+}
+
+
+
+/* Reset default styling */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+/* Bold Typography */
+h1, h2, h3 {
+    font-weight: 700;
+}
+
+h1 {
+    color: #ff5733;
+}
+
+h2 {
+    color: #ffbd33;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 0;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.custom-section {
+    padding: 50px;
+    background-color: #eee;
+}
+
+/* Cat Breed Boxes */
+.cat-breed-container {
+    flex: 1; /* Allow the boxes to take up remaining space */
+  /* background-color: #fcbbff; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Set to 3 columns per row */
+    gap: 20px; /* Spacing between grid items */
+    padding: 20px;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto; /* Center the grid container */
+    clear: both; /* Clear floats */
+}
+
+.cat-breed-box {
+    background-color: #C8E6C9; /* Light Green */
+    border: 1px solid #282825;
+    border-radius: 20px;
+    padding: 32px 24px;
+    transition: transform .25s cubic-bezier(.645,.045,.355,1), box-shadow .25s cubic-bezier(.645,.045,.355,1);
+    text-align: center;
+    box-shadow: 3px 3px #282825; 
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+}
+
+.cat-breed-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150px; /* Set a fixed height */
+    overflow: auto; /* Make overflow content scrollable */
+}
+
+
+
+.cat-breed-box:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px #282825;
+}
+
+.cat-breed-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* .cat-breed-content {
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cat-breed-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+/* Typography Enhancements */
+h3 {
+    font-weight: 900;
+    font-size: 24px;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+p {
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+
+
+.App-header {
+    text-align: left; /* Align the text to the left */
+}
+
+/* Updated styles for the cat sleeping gif */
+.cat-sleeping-gif {
+    float: right; /* Float the image to the right */
+    max-width: 200px; /* Set a max width for the image */
+    margin-left: 20px; /* Add some space between the image and the text */
+    margin-bottom: 20px; /* Add some space below the image */
+}
+
+
+
+
+@media (max-width: 768px) {
+    .cat-breed-box {
+        flex-basis: calc(50% - 40px); /* Adjust the width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .cat-breed-box {
+        flex-basis: calc(100% - 40px); /* Adjust the width for very small screens */
+    }
+}
+
+
+
+/* stlying for meow gpt svelte app */
+.iframe-container {
+    position: fixed; /* Use 'fixed' to position it relative to the viewport */
+    top: 0;
+    right: 0;
+    height: 100%; /* Adjust the height as needed */
+    z-index: 2; /* Ensure it's above other elements */
+    overflow-y: auto; /* Add vertical scroll if content exceeds container height */
+    width: 15%; /* Adjust the width as needed */
+    padding: 30px; /* Add padding for spacing */
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .iframe-container iframe {
+    width: 100%; /* Make the iframe take the full width of its container */
+    height: 100%; /* Make the iframe take the full height of its container */
+    border: none;
+  }
+  
