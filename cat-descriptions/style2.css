@@ -453,3 +453,37 @@ h1 {
     border: 3px solid #000; /* Add a border for a brutalist look */
     border-radius: 0; /* Optional: make the corners sharp */
 }
+
+
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 183, 0, 0.7), rgba(2, 48, 187, 0.7),  rgba(14, 255, 82, 0.7), rgba(241, 37, 37, 0.7));
+    background-size: 200% 200%;
+    opacity: 0.5;
+    z-index: -1;
+    animation: gradientMove 20s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 200% 200%;
+    }
+    25% {
+        background-position: -100% -10%;
+    }
+    50% {
+        background-position: 0 0;
+    }
+    75% {
+        background-position: -20 -40;
+    }
+    100% {
+        background-position: 0 200%;
+    }
+}

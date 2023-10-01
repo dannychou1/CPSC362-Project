@@ -61,11 +61,7 @@ body::before {
 
 
 
-/* Reset default styling */
-body, h2, h3, p {
-    margin: 0;
-    padding: 0;
-}
+
 
 .container {
     max-width: 800px;
@@ -73,16 +69,7 @@ body, h2, h3, p {
     padding: 40px;
 }
 
-/* Bold Typography */
-h2, h3 {
-    font-weight: 700;
-}
 
-
-
-h2 {
-    color: #ffbd33;
-}
 
 .button {
     display: inline-block;
@@ -187,15 +174,7 @@ h2 {
     }
 }
 
-/* Typography Enhancements */
-h3 {
-    font-weight: 900;
-    font-size: 24px;
-    color: #333;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    text-decoration: none;
-}
+
 
 p {
     font-weight: 700;
@@ -310,4 +289,40 @@ h1 {
     border-radius: 0; /* Optional: make the corners sharp */
 
    
+}
+
+
+
+
+.styled-text {
+    color: #333333; /* Adjust the color as needed */
+    font-family: 'Roboto', sans-serif; /* Use the same font family as the header */
+    text-transform: uppercase; /* Make the text uppercase */
+    letter-spacing: 2px; /* Increase letter spacing */
+}
+
+/* You can also style them individually if needed */
+h2.styled-text {
+    font-weight: 700; /* Make it bold */
+    font-size: 24px; /* Adjust the font size */
+    color: #ffc400; /* Adjust the color as needed */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, 1px 2px 0 #000, 1px 1px 0 #000; /* Add text outline */
+
+
+}
+
+h3.styled-text, p.styled-text {
+    font-weight: 400; /* Regular weight */
+    font-size: 20px; /* Adjust the font size */
+    
+}
+
+/* If you want the summary text to be different */
+p.summary {
+    font-size: 18px; /* Adjust the font size */
+    font-weight: 400; /* Regular weight */
+    color: #ff0000; /* Adjust the color as needed */
+    text-shadow: -1px -1px 0 #000, -1px -1px 0 #000, -1px -1px 0 #000, -1px 1px 0 #000; /* Add text outline */
+
+
 }
