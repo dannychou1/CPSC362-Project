@@ -62,7 +62,7 @@ body::before {
 
 
 /* Reset default styling */
-body, h1, h2, h3, p {
+body, h2, h3, p {
     margin: 0;
     padding: 0;
 }
@@ -74,13 +74,11 @@ body, h1, h2, h3, p {
 }
 
 /* Bold Typography */
-h1, h2, h3 {
+h2, h3 {
     font-weight: 700;
 }
 
-h1 {
-    color: #ff5733;
-}
+
 
 h2 {
     color: #ffbd33;
@@ -136,6 +134,17 @@ h2 {
     display: flex;
     flex-direction: column; /* Stack children vertically */
     align-items: center; /* Center children horizontally */
+    
+}
+
+
+
+.cat-breed-box h3 {
+    font-size: 1em; /* Adjust font size as needed */
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; /* Add ellipsis (...) for overflow content */
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    width: 100%; /* Full width of the parent container */
 }
 
 .cat-breed-content {
@@ -213,7 +222,17 @@ a, a:hover {
 }
 
 
+/* Mobile view */
+@media (max-width: 600px) {
+    .cat-breed-box {
+        width: 150px;
+        height: 200px;
+    }
 
+    .cat-breed-box h3 {
+        font-size: 0.8em;
+    }
+}
 
 @media (max-width: 768px) {
     .cat-breed-box {
@@ -248,3 +267,47 @@ a, a:hover {
     border: none;
   }
   
+
+
+
+
+  
+
+  .popout-bubble {
+    padding: 11px;
+    border: 5px solid #000;
+    background-color: #fff; /* You can adjust the color to match your design */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    position: relative;
+    z-index: 2; /* Ensure it's above the gradient background */
+}
+
+
+
+
+
+
+.bold {
+    font-weight: 900; /* Make the text bold */
+    color: #000; /* Dark color for contrast */
+    font-size: 48px; /* Adjust the font size as needed */
+    font-family: 'Andada Pro', serif; /* Use a serif font for a brutalist look */
+}
+
+.regular {
+    font-weight: 400; /* Regular weight */
+    color: #000; /* Same color for consistency, adjust as needed */
+    font-size: 48px; /* Keep the font size consistent */
+    font-family: 'Andada Pro', serif; /* Use the same font family */
+}
+
+h1 {
+    background-color: #fff; /* Add a background color */
+    display: inline-block; /* Make the background fit the text */
+    padding: 10px; /* Add some padding */
+    border: 3px solid #000; /* Add a border for a brutalist look */
+    border-radius: 0; /* Optional: make the corners sharp */
+
+   
+}
