@@ -38,10 +38,13 @@ function toggleDropdown(id) {
 
 // function for chat box, toggle button
 $(document).ready(function(){
+    $(".iframe-container").addClass("hidden"); // This line hides the chatbox when the page loads
+
     $("#toggle-chat-box").click(function(){
         $(".iframe-container").toggleClass("hidden");
     });
 });
+
 
 
 
