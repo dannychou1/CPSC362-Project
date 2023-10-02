@@ -227,25 +227,7 @@ a, a:hover {
 
 
 
-/* stlying for meow gpt svelte app */
-.iframe-container {
-    position: fixed; /* Use 'fixed' to position it relative to the viewport */
-    top: 0;
-    right: 0;
-    height: 100%; /* Adjust the height as needed */
-    z-index: 2; /* Ensure it's above other elements */
-    overflow-y: auto; /* Add vertical scroll if content exceeds container height */
-    width: 15%; /* Adjust the width as needed */
-    padding: 30px; /* Add padding for spacing */
-    background-color: rgba(255, 255, 255, 0.9);
-  }
-  
-  .iframe-container iframe {
-    width: 100%; /* Make the iframe take the full width of its container */
-    height: 100%; /* Make the iframe take the full height of its container */
-    border: none;
-  }
-  
+
 
 
 
@@ -326,3 +308,63 @@ p.summary {
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+/* stlying for meow gpt svelte app */
+
+.hidden {
+    display: none;
+}
+
+
+/* stlying for meow gpt svelte app */
+.iframe-container {
+    position: fixed; /* Use 'fixed' to position it relative to the viewport */
+    bottom: 20px; /* Position it at the bottom */
+    right: 20px; /* Position it to the right */
+    height: 725px; /* Adjust the height as needed */
+    z-index: 2; /* Ensure it's above other elements */
+    overflow-y: auto; /* Add vertical scroll if content exceeds container height */
+    width: 500px; /* Adjust the width as needed */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Add shadow for floating effect */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+}
+
+.iframe-container iframe {
+    width: 100%; /* Make the iframe take the full width of its container */
+    height: 100%; /* Make the iframe take the full height of its container */
+    border: none; /* Remove border */
+    border-radius: 10px; /* Add border-radius to iframe as well */
+}
+
+#toggle-chat-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 3;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#toggle-chat-box:hover {
+    background-color: #555;
+}
+
+  

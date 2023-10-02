@@ -36,6 +36,17 @@ function toggleDropdown(id) {
 
 
 
+// function for chat box, toggle button
+$(document).ready(function(){
+    $("#toggle-chat-box").click(function(){
+        $(".iframe-container").toggleClass("hidden");
+    });
+});
+
+
+
+
+
 
 
 // function for dark mode toggle
