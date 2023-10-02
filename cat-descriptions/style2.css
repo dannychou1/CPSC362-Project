@@ -66,37 +66,68 @@
     color: #333;
 }
 
-/* Styles for the cat breed information paragraph */
+/* Style for the <p> text */
 .breed-info p {
-    color: #333;
+    font-family: 'Andada Pro', serif; /* Use the same font family as the <h1> */
+    font-weight: 900; /* Make the text bold */
+    color: #000; /* Dark color for contrast */
+    font-size: 20px; /* Adjust the font size as needed */
+    background-color: #fff; /* Add a background color */
+    display: inline-block; /* Make the background fit the text */
+    padding: 10px; /* Add some padding */
+    border: 3px solid #000; /* Add a border for a brutalist look */
+    border-radius: 0; /* Optional: make the corners sharp */
+    text-transform: uppercase; /* Make the text uppercase */
+    letter-spacing: 2px; /* Increase letter spacing */
 }
 
+
+
+
+/* Updated style for the sidebar */
 .sidebar {
-    flex: 1;
-    margin-left: 20px;
+    font-family: 'Andada Pro', serif;
+    color: #000;
+    background-color: #fff;
+    padding: 20px;
+    border: 3px solid #000;
+    border-radius: 20px; /* Updated: make the corners rounded */
 }
 
+/* Updated style for the key facts section */
 .info-box {
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px; /* Updated: make the corners rounded */
+    overflow: hidden; /* Updated: hide the overflow content to maintain the rounded corners */
 }
 
 .info-box h2 {
-    margin-bottom: 20px;
+    font-weight: 900;
     font-size: 24px;
-    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    padding: 10px; /* Updated: add some padding */
+    background-color: #000; /* Updated: add a background color */
+    color: #fff; /* Updated: change the text color for contrast */
 }
 
 .info-box ul {
     list-style-type: none;
+    padding: 0;
 }
 
 .info-box li {
-    margin-bottom: 10px;
-    color: #333;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 5px 0;
+    border-bottom: 2px solid #000;
 }
+
+.info-box li:last-child {
+    border-bottom: none;
+}
+
+
 
 
 
