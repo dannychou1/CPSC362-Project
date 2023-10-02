@@ -1,20 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const toggleElement = document.querySelector('.toggleBar'); // Corrected selector
-  const body = document.body;
-
-  if (toggleElement) {
-      toggleElement.addEventListener('click', () => {
-          body.classList.toggle('dark');
-          console.log('Dark mode toggled');
-      });
-  }
-});
-
-
-
-
-
-
 // jquery code, function for cat description generally healthy info drop down box
 
 $(document).ready(function() {
@@ -52,6 +35,22 @@ function toggleDropdown(id) {
 
 
 
+
+
+
+// function for dark mode toggle
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     const toggleElement = document.querySelector('.toggleBar'); // Corrected selector
+//     const body = document.body;
+  
+//     if (toggleElement) {
+//         toggleElement.addEventListener('click', () => {
+//             body.classList.toggle('dark');
+//             console.log('Dark mode toggled');
+//         });
+//     }
+//   });
 
 
 
