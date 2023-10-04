@@ -14,21 +14,33 @@
 /* Styles for the container holding the cat image */
 
 .cat-image-container {
-    flex: 1;
-    margin-left: 20px; /* Updated to margin-left */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: none; /* Changed from flex: 1 to flex: none to not grow and take the space */
+    width: 300px; /* Set a specific width */
+    height: 250px; /* Set a specific height */
+    margin-right: 20px;
     overflow: hidden;
-    border-radius: 10px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 .cat-image {
-    max-width: 300px; /* Added to limit the image width */
-    width: 100%;
-    height: auto; /* Added to maintain the aspect ratio */
+    width: 100%; /* Ensure the image takes the full width of its container */
+    height: 100%; /* Ensure the image takes the full height of its container */
+    object-fit: cover; /* This will cover the entire element, and not stretch the image */
     border-radius: 10px;
     transition: transform 0.3s ease-in-out;
 }
+
+
+
+
+
+
+
+
 
 /* Styles for the hover effect on the cat image container */
 .cat-image-container:hover {
@@ -135,36 +147,68 @@
 
 
 
-/* Styles for the facets container holding additional cat breed attributes */
-
 .facets-container {
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: #e0e0e0; /* Different color for this strip */
+    justify-content: center;
+    padding: 10px; /* Reduced padding */
+    background-color: #f0f0f0;
     border-radius: 10px;
-    margin-top: 20px; /* Space between this container and the above content */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap;
 }
 
 .facet-box {
     flex: 1;
-    padding: 20px;
-    background-color: #f0f0f0; /* Pill box color */
-    border-radius: 20px; /* Pill shape */
-    margin: 0 10px; /* Space between pill boxes */
+    padding: 10px; /* Reduced padding */
+    background-color: white;
+    border: 2px solid #333;
+    border-radius: 35px;
+    margin: 5px; /* Reduced margin */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    min-width: calc(30% - 10px); /* Reduced minimum width */
+    max-width: calc(30% - 10px); /* Added maximum width to control the size */
+}
+
+@media (max-width: 600px) {
+    .facet-box {
+        flex: 100%;
+        margin-bottom: 10px; /* Reduced margin */
+        min-width: 100%;
+        max-width: 100%; /* Ensure it takes full width on smaller screens */
+    }
+}
+
+.facet-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .facet-box h3 {
-    font-size: 20px;
-    color: #333;
-    margin-bottom: 10px;
+    font-size: 20px; /* Reduced font size */
+    color: #000;
+    margin-bottom: 5px; /* Reduced margin */
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .facet-box p {
-    color: #333;
+    color: #000;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 14px; /* Reduced font size */
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -174,42 +218,53 @@
 /* Styles for the list items in the "Need to Know" container */
 
 .need-to-know-container {
-    padding: 20px;
-    margin-top: 20px; /* Space between this container and the facets container */
-    border-radius: 10px;
-    background-color: #f0f0f0; /* Background color */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 40px; /* Increased padding */
+    margin-top: 40px; /* Increased margin */
+    border-radius: 0; /* Removed border-radius for a more blocky look */
+    background-color: #333; /* Darker background for contrast */
+    color: #fff; /* Light text color for contrast */
+    box-shadow: none; /* Removed box shadow for flat design */
+    border: 5px solid #fff; /* Added border for more structure */
 }
 
 .need-to-know-container h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
+    font-size: 36px; /* Increased font size */
+    color: #fff; /* Light text color */
+    margin-bottom: 40px; /* Increased margin */
+    text-transform: uppercase; /* Capitalized text */
+    letter-spacing: 5px; /* Increased letter spacing */
+    font-weight: bold; /* Bold font weight */
 }
 
 .need-to-know-container ul {
     list-style-type: none;
     padding-left: 0;
+    border-top: 2px solid #fff; /* Added border for separation */
+    padding-top: 20px; /* Added padding for spacing */
 }
 
 .need-to-know-container li {
-    margin-bottom: 10px;
-    color: #333;
+    margin-bottom: 20px; /* Increased margin */
+    font-size: 20px; /* Increased font size */
     position: relative;
-    padding-left: 30px; /* Make space for the custom bullet point */
+    padding-left: 50px; /* Increased padding */
+    font-weight: bold; /* Bold font weight */
+    border-bottom: 2px solid #fff; /* Added border for separation */
+    padding-bottom: 10px; /* Added padding for spacing */
 }
 
 .need-to-know-container li:before {
-    content: ''; /* Updated to empty, we will use background-image instead */
+    content: '';
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    width: 20px; /* Adjust size as needed */
-    height: 20px; /* Adjust size as needed */
-    background-image: url('../images/cat.png'); /* Using background-image to control the size */
-    background-size: contain; /* This will ensure the icon fits within the dimensions */
-    background-repeat: no-repeat; /* This will prevent the icon from repeating */
+    width: 30px; /* Increased size */
+    height: 30px; /* Increased size */
+    background-image: url('../images/cat.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    filter: invert(1); /* Inverted color for contrast */
 }
 
 
@@ -217,7 +272,6 @@
 
 
 
-/* Styles for the health information container */
 
 /* Styles for the health information container */
 .health-info-container {
@@ -225,8 +279,10 @@
     border: 1px solid #ccc;
     border-radius: 10px;
     overflow: hidden; /* Keeps the border-radius effect when content expands */
-    max-width: 33%; /* Limits the width to 1/3 of the parent container */
-    margin-left: 20px; /* Aligns the box to the left */
+    width: 60%; /* Adjusted the width */
+    margin-left: auto; /* Center the container */
+    margin-right: auto; /* Center the container */
+    padding: 10px 40px; /* Adjusted padding to make it less tall */
 }
 
 .health-info-header,
@@ -258,13 +314,10 @@
     margin-left: 10px;
 }
 
-
-
 .health-info-content p,
 .health-info-content ul {
     margin-bottom: 10px;
 }
-
 
 .health-info-content {
     display: none; 
@@ -275,6 +328,7 @@
     max-height: 1000px; /* Increased max-height */
     padding: 20px; 
 }
+
 
 
 
@@ -309,8 +363,7 @@
 
 
 
-/* Styles for the personality container holding the cat image and personality information */
-
+/* Existing CSS */
 .personality-container {
     display: flex;
     align-items: center;
@@ -318,27 +371,28 @@
     margin: auto;
     padding: 20px;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
-.cat-image-container {
-    flex: 1;
-    margin-right: 20px;
-    overflow: hidden;
-    border-radius: 10px;
-}
+/* ... (rest of your existing CSS) ... */
 
-.cat-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
+/* Add a media query for smaller screens */
+@media (max-width: 768px) {
+    .personality-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-.personality-info-container {
-    flex: 2;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    .cat-image-container {
+        margin-right: 0;
+        margin-bottom: 20px; /* Add space between the image and text when stacked */
+        flex:1;
+    }
+
+    .personality-info-container {
+        width: 100%; /* Make the text container take the full width */
+        flex:2;
+    }
 }
 
 .personality-info-container h2 {
@@ -443,7 +497,7 @@
     .cat-info-container,
     .cat-image-container,
     .sidebar {
-        width: 100%;
+        width: 90%;
         margin: 0;
         flex:none;
     }
@@ -517,4 +571,93 @@ body::before {
     100% {
         background-position: 0 200%;
     }
+}
+
+
+
+
+/* for background mobile */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+.container {
+    min-height: 100%;
+    overflow: auto; /* or 'hidden' to hide overflow content */
+    /* Other styles */
+}
+
+body {
+    background-color: #f0f0f0; /* Adjust the color as needed */
+}
+
+
+
+
+/* for popout main cat image */
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+/* Modal Content (Image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
