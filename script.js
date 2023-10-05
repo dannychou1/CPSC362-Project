@@ -47,6 +47,42 @@ $(document).ready(function(){
 
 
 
+// for popout cat image in cat description page
+// Get the modal
+window.onload = function() {
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the image and insert it inside the modal
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    
+    if(img) {  // Check if img is not null
+        img.onclick = function(){
+            console.log('Image clicked');  // Debugging line
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+    } else {
+        console.log('img element not found');
+    }
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    if(span) {  // Check if span is not null
+        span.onclick = function() {
+            console.log('Close button clicked');  // Debugging line
+            modal.style.display = "none";
+        }
+    } else {
+        console.log('span element not found');
+    }
+}
+
 
 
 
