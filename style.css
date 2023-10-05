@@ -108,6 +108,7 @@ body::before {
     max-width: 1200px; /* Adjust as needed */
     margin: 0 auto; /* Center the grid container */
     clear: both; /* Clear floats */
+    min-height: 80vh; /* Adjust as needed */
 }
 
 .cat-breed-box {
@@ -368,3 +369,25 @@ p.summary {
 }
 
   
+
+
+
+
+
+/* alphabet filter for cats style */
+#searchBar {
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    width: 100%;
+    max-width: 500px;
+}
+
+#alphabetFilter button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+.active-filter {
+    background-color: #ddd; /* or any other style to highlight the button */
+}

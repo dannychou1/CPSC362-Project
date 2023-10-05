@@ -87,6 +87,89 @@ window.onload = function() {
 
 
 
+// function for flipping pages main page
+document.addEventListener('DOMContentLoaded', function() {
+    let currentPage = 1;
+    const breedsPerPage = 6;
+    const breeds = document.querySelectorAll('.breed');
+    let activeFilter = '';
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const pageNum = document.getElementById('page-num');
+
+    const displayBreeds = () => {
+        const filteredBreeds = Array.from(breeds).filter(breed => {
+            const name = breed.querySelector('h3').innerText.toUpperCase();
+            return !activeFilter || name.startsWith(activeFilter);
+        });
+
+        const totalBreeds = filteredBreeds.length;
+        const totalPages = Math.ceil(totalBreeds / breedsPerPage);
+        const start = (currentPage - 1) * breedsPerPage;
+        const end = start + breedsPerPage;
+
+        breeds.forEach(breed => breed.style.display = 'none');
+        filteredBreeds.slice(start, end).forEach(breed => breed.style.display = 'block');
+
+        // Update page number display
+        pageNum.textContent = `Page ${currentPage} of ${totalPages}`;
+
+        // Enable/disable buttons
+        prevBtn.disabled = currentPage === 1;
+        nextBtn.disabled = currentPage === totalPages;
+    };
+
+    const nextPage = () => {
+        currentPage++;
+        displayBreeds();
+    };
+
+    const prevPage = () => {
+        currentPage--;
+        displayBreeds();
+    };
+
+    nextBtn.addEventListener('click', nextPage);
+    prevBtn.addEventListener('click', prevPage);
+
+    const filterByLetter = (letter) => {
+        activeFilter = letter;
+        currentPage = 1; // Reset to the first page when the filter changes
+        displayBreeds();
+    };
+
+    window.filterByLetter = filterByLetter; // Make it global to be accessible from HTML
+
+    displayBreeds(); // Initial display
+});
+
+
+
+
+
+
+
+
+
+
+
+// function filterByLetter(letter) {
+//     const breeds = document.querySelectorAll('.cat-breed-box');
+
+//     breeds.forEach(breed => {
+//         const name = breed.querySelector('h3').innerText.toUpperCase();
+//         if (letter === "") {
+//             breed.style.display = '';  // Show all breeds if no letter is provided
+//         } else {
+//             breed.style.display = name.startsWith(letter) ? '' : 'none';
+//         }
+//     });
+// }
+
+
+
+
+
 
 // function for dark mode toggle
 
