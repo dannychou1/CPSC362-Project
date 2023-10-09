@@ -1,368 +1,15 @@
-/* .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    /* This will make the container take the full viewport height */
-    background-color: #f0f0f0;
-    /* Optional background color for the entire page */
-} */
-
-
-
-.container {
-    
-
-    transition: background 0.3s, color 0.3s;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom, #bd2bfc, #f5c1a0);
-    font-family: 'Andada Pro', serif;
-    color: rgb(57, 57, 57);
-} 
-
-
-
-
-.App-header {
-    text-align: center;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.cat-sleeping-gif {
-    width: 200px;
-    height: auto;
-    border-radius: 50%;
-}
-
-
-.cat-breed-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap; /* Allow boxes to wrap to the next line on smaller screens */
-}
-
-
-
-
-.cat-breed-box:hover {
-    transform: scale(1.05);
-}
-
-.cat-breed-box {
-    width: 300px;
-    min-height: 400px; /* Set a minimum height for the boxes */
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: center; /* Vertically center-align content */
-    align-items: center; /* Horizontally center-align content */
-    text-align: center;
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    text-decoration: none;
-    color: #333;
-    transition: transform 0.2s;
-}
-
-.cat-breed-image {
-    width: 100px;
-    height: auto;
-    border-radius: 50%;
-}
-
-.cat-breed-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-
-
-
-/* Add media queries for smaller screens */
-@media screen and (max-width: 768px) {
-    .cat-breed-container {
-        flex-wrap: wrap; /* Allow boxes to wrap to the next line on smaller screens */
-    }
-
-    .cat-breed-box {
-        flex: 0 0 calc(50% - 20px); /* Two boxes per row with some margin in between */
-        margin: 10px; /* Add spacing between boxes */
-    }
-}
-
-
-
-
-
-
-
-
-/* for future use for chatbot if decide to integrate */
-.svelte-app-frame {
-    width: 100%; /* Adjust the width as needed */
-    height: 700px; /* Adjust the height as needed */
-    border: none; /* Remove the default border */
-}
-
-
-
-
-
-
-
-
-
-
-/* for dark mode toggle face */
-
-.toggleBox {
-    max-width: 329px;
-    padding: 1%;
-    overflow: hidden;
-    position: relative;
-    margin: 0 auto;
-    top: 11px;
-    left: 705px;
-} 
-  
-
-   .footer {  
-    position: fixed;  
-    bottom: 0;  
-    right: 15px;  
-   }  
-   .toggleBar {  
-    width: 30%;  
-    padding-bottom: 20%;  
-    background-color: #6e6e6e;  
-    float: left;  
-    position: relative;  
-    margin-left: 35%;  
-    transition: all 0.6s ease-out;  
-   }  
-   .toggleBar::before {  
-    content: "";  
-    width: 60%;  
-    position: absolute;  
-    background-color: #6e6e6e;  
-    top: 0;  
-    left: -30%;  
-    height: 100%;  
-    border-radius: 50% 0 0 50%;  
-    transition: all 0.6s ease-out;  
-   }  
-   .toggleBar::after {  
-    content: "";  
-    width: 60%;  
-    position: absolute;  
-    background-color: #6e6e6e;  
-    top: 0;  
-    right: -30%;  
-    height: 100%;  
-    border-radius: 0 50% 50% 0;  
-    transition: all 0.6s ease-out;  
-   }  
-   .ball {  
-    width: 60%;  
-    padding-bottom: 60%;  
-    position: absolute;  
-    background-color: white;  
-    top: 5%;  
-    left: -25%;  
-    border-radius: 50%;  
-    box-shadow: 0px 2px 8px #999;  
-    overflow: hidden;  
-    z-index: 1;  
-    transition: all 0.6s ease-in;  
-   }  
-   .ballGradient {  
-    background-image: radial-gradient(circle at 80% 20%, white 0%, #FFF 30%, #DDD 80%);  
-   }  
-   /* face component */  
-   .face {  
-    width: 50%;  
-    padding-bottom: 50%;  
-    position: absolute;  
-    top: 30%;  
-    left: 25%;  
-    /*  border:1px solid red; */  
-   }  
-   .faceSleep {  
-    left: 15%;  
-    transition: all 0.3s ease-in 0.3s;  
-   }  
-   .faceAwake {  
-    left: 35%;  
-    transition: all 0.3s ease-in 0s;  
-    transform: translateX(-200%);  
-   }  
-   .face .eyes {  
-    width: 30%;  
-    height: 30%;  
-    /*  border:1px solid red; */  
-    position: absolute;  
-    top: 20%;  
-    overflow: hidden;  
-   }  
-   .face .eyesLeft {  
-    left: 5%;  
-   }  
-   .face .eyesRight {  
-    right: 5%;  
-   }  
-   .faceAwake .eyesLeft {  
-    left: 0%;  
-   }  
-   .faceAwake .eyesRight {  
-    right: 0%;  
-   }  
-   .faceSleep .eyes {  
-    top: 40%;  
-   }  
-   .faceSleep .eyesBall {  
-    width: 80%;  
-    height: 80%;  
-    position: absolute;  
-    border-radius: 50%;  
-    background-color: #8f8f8f;  
-    top: -45%;  
-    /*  border:5% solid #8f8f8f; */  
-   }  
-   .faceAwake .eyesBall {  
-    width: 60%;  
-    height: 65%;  
-    position: absolute;  
-    border-radius: 50%;  
-    background-color: #8f8f8f;  
-    top: 5%;  
-    /*  border:5% solid #8f8f8f; */  
-   }  
-   .face .mouth {  
-    width: 100%;  
-    height: 30%;  
-    /*  border:1px solid red; */  
-    position: absolute;  
-    left: 0%;  
-    bottom: 0%;  
-    overflow: hidden;  
-   }  
-   .faceSleep .mouthLips {  
-    width: 20%;  
-    height: 40%;  
-    background-color: #8f8f8f;  
-    position: absolute;  
-    top: -10%;  
-    left: 35%;  
-    border-radius: 50%;  
-   }  
-   .faceAwake .mouthLips {  
-    width: 60%;  
-    padding-bottom: 45%;  
-    background-color: #337aff;  
-    position: absolute;  
-    top: -60%;  
-    left: 12.5%;  
-    border-radius: 50%;  
-    box-shadow: inset 0px 9px 9px rgba(115, 115, 115, 0.5);  
-   }  
-   .faceSleep .mouth {  
-    bottom: -10%;  
-   }  
-   .faceAwake .mouth {  
-    bottom: 10%;  
-   }  
-   /* transition */  
-   .checkbox:checked ~ .toggleBar, .checkbox:checked ~ .toggleBar::before,  
-   .checkbox:checked ~ .toggleBar::after {  
-    background-color: #337aff;  
-    
-   }  
-   .checkbox:checked ~ .toggleBar .ball {  
-    transform: translateX(150%);  
-   }  
-   .checkbox:checked ~ .toggleBar .faceSleep {  
-    transform: translateX(200%);  
-    transition-delay: 0;  
-    
-    transition: all 0.3s ease-out 0s;  
-   }  
-   .checkbox:checked ~ .toggleBar .faceAwake {  
-    transform: translateX(0);  
-    transition-delay: 0;  
-    transition: all 0.3s ease-out 0.3s;  
-   }  
-
-
-   .checkbox
-   {
-
-    position: absolute;
-    opacity: 0;
-    z-index: -1;
-   }
-
-
-
-
-
- /* Add other styles before dark mode styles if needed */
-
-
-
-/* body {
-    transition: background 0.3s, color 0.3s;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom, #bd2bfc, #f5c1a0);
-    font-family: 'Andada Pro', serif;
-    color: rgb(57, 57, 57);
-}  */
-
-/* body {
-    transition: 0.3s;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(241, 239, 239);
-    font-family: 'Andada Pro', serif;
-    color: rgb(57, 57, 57);
-} */
-
-body.dark {
-    background: linear-gradient(to bottom, #222, #333);
-    color: #fff;
-    /* Add other dark mode styles as needed */
-}
-
-/* Add a style for text in dark mode */
-body.dark .cat-breed-box h3,
-body.dark .cat-breed-box p {
-    color: #fff; /* Text color set to white in dark mode */
-}
-
-
-
-
-
-
-
+/* Updated Styles */
 body {
-    transition: 0.3s;
+    background: #D1C4E9; /* Light Purple */
+    color: #333; /* Dark text for contrast */
+    font-family: 'Andada Pro', serif;
+    transition: background 0.3s, color 0.3s;
     margin: 0;
     padding: 0;
-    background: linear-gradient(to bottom, #bd2bfc, #f5c1a0);
-    font-family: 'Andada Pro', serif;
-    color: rgb(57, 57, 57);
-    position: relative; /* Required for absolute positioning of ::before pseudo-element */
-    z-index: 1; /* Ensure the main content is above the pseudo-element */
+    position: relative;
+    z-index: 1;
 }
 
-/* Create a pseudo-element to hold the 3D asset */
 body::before {
     content: "";
     position: absolute;
@@ -370,13 +17,377 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('./images/cat.jpg') no-repeat top center fixed;
-    background-size: cover;
-    opacity: 0.5; /* Adjust the opacity as needed */
-    z-index: -1; /* Place the pseudo-element behind the content */
+    background: linear-gradient(45deg, rgba(255, 183, 0, 0.7), rgba(2, 48, 187, 0.7),  rgba(14, 255, 82, 0.7), rgba(241, 37, 37, 0.7));
+    background-size: 200% 200%;
+    opacity: 0.5;
+    z-index: -1;
+    animation: gradientMove 20s ease infinite;
 }
 
-body.dark::before {
-    /* Adjust the background for dark mode if needed */
-    background: linear-gradient(to bottom, #222, #333);
+@keyframes gradientMove {
+    0% {
+        background-position: -10% -10%;
+    }
+    25% {
+        background-position: -100% -10%;
+    }
+    50% {
+        background-position: -200 -200;
+    }
+    75% {
+        background-position: -20 -40;
+    }
+    100% {
+        background-position: 0 200%;
+    }
+}
+
+    
+
+
+
+.container {
+    background: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Andada Pro', serif;
+    color: #333;
+}
+
+.cat-breed-box {
+    border: 3px solid #000;
+    color: #000;
+}
+
+
+
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 0;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+.img-responsive {
+    max-width: 100%;
+    height: auto;
+}
+
+.custom-section {
+    padding: 50px;
+    background-color: #eee;
+}
+
+/* Cat Breed Boxes */
+.cat-breed-container {
+    flex: 1; /* Allow the boxes to take up remaining space */
+  /* background-color: #fcbbff; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Set to 3 columns per row */
+    gap: 20px; /* Spacing between grid items */
+    padding: 20px;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto; /* Center the grid container */
+    clear: both; /* Clear floats */
+    min-height: 80vh; /* Adjust as needed */
+}
+
+.cat-breed-box {
+    background-color: #C8E6C9; /* Light Green */
+    border: 1px solid #282825;
+    border-radius: 20px;
+    padding: 32px 24px;
+    transition: transform .25s cubic-bezier(.645,.045,.355,1), box-shadow .25s cubic-bezier(.645,.045,.355,1);
+    text-align: center;
+    box-shadow: 3px 3px #282825; 
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    
+}
+
+
+
+.cat-breed-box h3 {
+    font-size: 1em; /* Adjust font size as needed */
+    overflow: hidden; /* Hide overflow content */
+    text-overflow: ellipsis; /* Add ellipsis (...) for overflow content */
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    width: 100%; /* Full width of the parent container */
+}
+
+.cat-breed-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150px; /* Set a fixed height */
+    overflow: auto; /* Make overflow content scrollable */
+}
+
+
+
+.cat-breed-box:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px #282825;
+}
+
+.cat-breed-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* .cat-breed-content {
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cat-breed-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+
+
+p {
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+
+
+.App-header {
+    text-align: left; /* Align the text to the left */
+}
+
+/* Updated styles for the cat sleeping gif */
+.cat-sleeping-gif {
+    float: right; /* Float the image to the right */
+    max-width: 200px; /* Set a max width for the image */
+    margin-left: 20px; /* Add some space between the image and the text */
+    margin-bottom: 20px; /* Add some space below the image */
+}
+
+
+/* Mobile view */
+@media (max-width: 600px) {
+    .cat-breed-box {
+        width: 150px;
+        height: 200px;
+    }
+
+    .cat-breed-box h3 {
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 768px) {
+    .cat-breed-box {
+        flex-basis: calc(50% - 40px); /* Adjust the width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .cat-breed-box {
+        flex-basis: calc(100% - 40px); /* Adjust the width for very small screens */
+    }
+}
+
+
+
+
+
+
+
+
+  
+
+  .popout-bubble {
+    padding: 11px;
+    border: 5px solid #000;
+    background-color: #fff; /* You can adjust the color to match your design */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    position: relative;
+    z-index: 2; /* Ensure it's above the gradient background */
+}
+
+
+
+
+
+
+.bold {
+    font-weight: 900; /* Make the text bold */
+    color: #000; /* Dark color for contrast */
+    font-size: 48px; /* Adjust the font size as needed */
+    font-family: 'Andada Pro', serif; /* Use a serif font for a brutalist look */
+}
+
+.regular {
+    font-weight: 400; /* Regular weight */
+    color: #000; /* Same color for consistency, adjust as needed */
+    font-size: 48px; /* Keep the font size consistent */
+    font-family: 'Andada Pro', serif; /* Use the same font family */
+}
+
+h1 {
+    background-color: #fff; /* Add a background color */
+    display: inline-block; /* Make the background fit the text */
+    padding: 10px; /* Add some padding */
+    border: 3px solid #000; /* Add a border for a brutalist look */
+    border-radius: 0; /* Optional: make the corners sharp */
+
+   
+}
+
+
+
+
+.styled-text {
+    color: #333333; /* Adjust the color as needed */
+    font-family: 'Roboto', sans-serif; /* Use the same font family as the header */
+    text-transform: uppercase; /* Make the text uppercase */
+    letter-spacing: 2px; /* Increase letter spacing */
+}
+
+/* You can also style them individually if needed */
+h2.styled-text {
+    font-weight: 700; /* Make it bold */
+    font-size: 24px; /* Adjust the font size */
+    color: #ffc400; /* Adjust the color as needed */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, 1px 2px 0 #000, 1px 1px 0 #000; /* Add text outline */
+
+
+}
+
+h3.styled-text, p.styled-text {
+    font-weight: 400; /* Regular weight */
+    font-size: 20px; /* Adjust the font size */
+    
+}
+
+/* If you want the summary text to be different */
+p.summary {
+    font-size: 18px; /* Adjust the font size */
+    font-weight: 400; /* Regular weight */
+    color: #ff0000; /* Adjust the color as needed */
+    text-shadow: -1px -1px 0 #000, -1px -1px 0 #000, -1px -1px 0 #000, -1px 1px 0 #000; /* Add text outline */
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* stlying for meow gpt svelte app */
+
+.hidden {
+    display: none;
+}
+
+
+/* stlying for meow gpt svelte app */
+.iframe-container {
+    position: fixed; /* Use 'fixed' to position it relative to the viewport */
+    bottom: 20px; /* Position it at the bottom */
+    right: 20px; /* Position it to the right */
+    height: 725px; /* Adjust the height as needed */
+    z-index: 2; /* Ensure it's above other elements */
+    overflow-y: auto; /* Add vertical scroll if content exceeds container height */
+    width: 500px; /* Adjust the width as needed */
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Add shadow for floating effect */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+}
+
+.iframe-container iframe {
+    width: 100%; /* Make the iframe take the full width of its container */
+    height: 100%; /* Make the iframe take the full height of its container */
+    border: none; /* Remove border */
+    border-radius: 10px; /* Add border-radius to iframe as well */
+}
+
+#toggle-chat-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 3;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#toggle-chat-box:hover {
+    background-color: #555;
+}
+
+  
+
+
+
+
+
+/* alphabet filter for cats style */
+#searchBar {
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    width: 100%;
+    max-width: 500px;
+}
+
+#alphabetFilter button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+.active-filter {
+    background-color: #ddd; /* or any other style to highlight the button */
 }
