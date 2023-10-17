@@ -50,38 +50,110 @@ $(document).ready(function(){
 // for popout cat image in cat description page
 // Get the modal
 window.onload = function() {
-    // Get the modal
     var modal = document.getElementById("myModal");
-
-    // Get the image and insert it inside the modal
-    var img = document.getElementById("myImg");
     var modalImg = document.getElementById("img01");
     var captionText = document.getElementById("caption");
-    
-    if(img) {  // Check if img is not null
+    var images = document.querySelectorAll('.modal-opener');
+
+    images.forEach(function(img) {
         img.onclick = function(){
-            console.log('Image clicked');  // Debugging line
             modal.style.display = "block";
             modalImg.src = this.src;
             captionText.innerHTML = this.alt;
         }
-    } else {
-        console.log('img element not found');
-    }
+    });
 
-    // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks on <span> (x), close the modal
-    if(span) {  // Check if span is not null
+    if(span) {
         span.onclick = function() {
-            console.log('Close button clicked');  // Debugging line
             modal.style.display = "none";
         }
-    } else {
-        console.log('span element not found');
     }
 }
+
+
+
+
+
+
+// function for flipping pages main page
+document.addEventListener('DOMContentLoaded', function() {
+    let currentPage = 1;
+    const breedsPerPage = 6;
+    const breeds = document.querySelectorAll('.breed');
+    let activeFilter = '';
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const pageNum = document.getElementById('page-num');
+
+    const displayBreeds = () => {
+        const filteredBreeds = Array.from(breeds).filter(breed => {
+            const name = breed.querySelector('h3').innerText.toUpperCase();
+            return !activeFilter || name.startsWith(activeFilter);
+        });
+
+        const totalBreeds = filteredBreeds.length;
+        const totalPages = Math.ceil(totalBreeds / breedsPerPage);
+        const start = (currentPage - 1) * breedsPerPage;
+        const end = start + breedsPerPage;
+
+        breeds.forEach(breed => breed.style.display = 'none');
+        filteredBreeds.slice(start, end).forEach(breed => breed.style.display = 'block');
+
+        // Update page number display
+        pageNum.textContent = `Page ${currentPage} of ${totalPages}`;
+
+        // Enable/disable buttons
+        prevBtn.disabled = currentPage === 1;
+        nextBtn.disabled = currentPage === totalPages;
+    };
+
+    const nextPage = () => {
+        currentPage++;
+        displayBreeds();
+    };
+
+    const prevPage = () => {
+        currentPage--;
+        displayBreeds();
+    };
+
+    nextBtn.addEventListener('click', nextPage);
+    prevBtn.addEventListener('click', prevPage);
+
+    const filterByLetter = (letter) => {
+        activeFilter = letter;
+        currentPage = 1; // Reset to the first page when the filter changes
+        displayBreeds();
+    };
+
+    window.filterByLetter = filterByLetter; // Make it global to be accessible from HTML
+
+    displayBreeds(); // Initial display
+});
+
+
+
+
+
+
+
+
+
+
+
+// function filterByLetter(letter) {
+//     const breeds = document.querySelectorAll('.cat-breed-box');
+
+//     breeds.forEach(breed => {
+//         const name = breed.querySelector('h3').innerText.toUpperCase();
+//         if (letter === "") {
+//             breed.style.display = '';  // Show all breeds if no letter is provided
+//         } else {
+//             breed.style.display = name.startsWith(letter) ? '' : 'none';
+//         }
+//     });
+// }
 
 
 
