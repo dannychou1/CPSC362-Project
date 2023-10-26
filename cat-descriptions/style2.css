@@ -1,3 +1,18 @@
+/* Apply the custom cursor to all elements */
+* {
+    cursor: url(http://www.zingerbugimages.com/cursors/tuxedo_cat.ani), 
+            url(http://www.zingerbug.com/cursors/cursors/tuxedo_cat.gif), 
+            progress !important;
+}
+
+/* Ensure the pointer cursor appears on clickable elements */
+a, button, [role="button"], [type="submit"], [type="reset"], [type="button"], .clickable {
+    cursor: pointer !important;
+}
+
+
+
+
 /* Styles for the main container holding the cat breed information and image */
 .cat-breed-container {
     display: flex;
@@ -62,26 +77,15 @@
 
 
 
-
-
-
-/* Styles for the container holding the cat breed information */
-
-.cat-info-container {
-    flex: 2;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-right: 20px; /* Added margin to the right */
-    flex:2;
+.breed-name h1{
+    text-align: center;
 }
-
 
 .breed-name {
     margin-bottom: 20px;
     font-size: 36px;
     color: #333;
+
 }
 
 /* Style for the <p> text */
@@ -97,7 +101,13 @@
     border-radius: 0; /* Optional: make the corners sharp */
     text-transform: uppercase; /* Make the text uppercase */
     letter-spacing: 2px; /* Increase letter spacing */
+
 }
+
+.breed-info {
+    text-align: center; /* Center the text of the description */
+}
+
 
 
 
@@ -107,10 +117,13 @@
     font-family: 'Andada Pro', serif;
     color: #000;
     background-color: #fff;
-    padding: 20px;
+    padding: 30px;
     border: 3px solid #000;
-    border-radius: 20px; /* Updated: make the corners rounded */
+    border-radius: 20px; /* Updated: make the corners slightly rounded */
+    width: 1000px; /* Set a fixed width for the sidebar */
+    height: auto; /* Let the height adjust based on content */
 }
+
 
 /* Updated style for the key facts section */
 .info-box {
@@ -335,7 +348,23 @@
     margin-left: auto; /* Center the container */
     margin-right: auto; /* Center the container */
     padding: 10px 40px; /* Adjusted padding to make it less tall */
+
+    box-shadow: 0 0 10px #0abcad, /* Inner glow */
+    0 0 20px #0abcad, /* Medium glow */
+    0 0 30px #0abcad, /* Outer glow */
+    0 0 40px #0abcad; /* Far outer glow */
 }
+
+/* for glow effect */
+.health-info-container:hover {
+    box-shadow: 0 0 15px #0abcad, 
+                0 0 25px #0abcad, 
+                0 0 35px #0abcad, 
+                0 0 45px #0abcad;
+}
+
+
+
 
 .health-info-header,
 .health-info-content {
@@ -347,7 +376,7 @@
     align-items: center;
     justify-content: center; /* Centers the items horizontally */
     padding: 10px 20px;
-    background-color: #f0f0f0;
+    background-color: #0abcad;
     cursor: pointer; /* Indicates the header is clickable */
 }
 
@@ -387,8 +416,8 @@
 
 
 
-/* Styles for the discover button in the intro section */
 
+/* Styles for the discover button in the intro section */
 .intro .logo-header .discover-button {
     display: inline-block;
     padding: 10px 20px;
@@ -398,9 +427,11 @@
     font-size: 18px;
     text-decoration: none;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    margin-top: 20px; /* Added space above the button */
     border: 3px solid #000; /* Add a border for a brutalist look */
-
+    position: absolute;     /* Absolute positioning */
+    top: 25px;                 /* Position at the top */
+    left: 25px;                /* Position to the left */
+    margin-top: 0;          /* Remove the top margin */
 }
 
 /* Styles for the hover effect on the discover button */
@@ -412,6 +443,18 @@
 .intro .logo-header a.discover-button {
     cursor: pointer !important;
 }
+
+/* Updated styles for positioning */
+.intro .logo-header {
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: flex-start; /* Align content to the top */
+    position: relative;      /* Set position to relative for absolute positioning of the button */
+}
+
+
+
+
 
 
 
@@ -425,13 +468,11 @@
     margin: auto;
     padding: 20px;
     margin-top: 20px;
-    flex-wrap: wrap;
     margin: 20px auto; /* Updated to center the container on the page */
 
 }
 
 
-/* ... (rest of your existing CSS) ... */
 
 /* Add a media query for smaller screens */
 @media (max-width: 768px) {
@@ -474,11 +515,11 @@
 /* Styles for the container holding the dropdown sections */
 
 .dropdowns-container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-
+    max-width: 1000px; /* Reduced from 1200px to 1000px */
+    margin: 10px auto; /* Reduced top and bottom margin */
+    padding: 10px; /* Reduced padding */
 }
+
 
 /* Styles for the individual dropdown sections */
 .dropdown {
@@ -574,7 +615,15 @@ img {
 
 
 
+h1 {
+    background-color: #fff; /* Add a background color */
+    display: inline-block; /* Make the background fit the text */
+    padding: 10px; /* Add some padding */
+    border: 3px solid #000; /* Add a border for a brutalist look */
+    border-radius: 0; /* Optional: make the corners sharp */
 
+    text-align: center;
+}
 
 
 
@@ -593,13 +642,7 @@ img {
     font-family: 'Andada Pro', serif; /* Use the same font family */
 }
 
-h1 {
-    background-color: #fff; /* Add a background color */
-    display: inline-block; /* Make the background fit the text */
-    padding: 10px; /* Add some padding */
-    border: 3px solid #000; /* Add a border for a brutalist look */
-    border-radius: 0; /* Optional: make the corners sharp */
-}
+
 
 
 
@@ -732,8 +775,9 @@ body {
 
 
 
-/* for cat icon generally healthy  */
-ul li {
+
+
+.cat-icon-list li {
     list-style-type: none;
     background: url('../images/cat.png') no-repeat left center;
     padding-left: 40px; /* Adjust based on the size of your icon */

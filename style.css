@@ -327,27 +327,25 @@ p.summary {
     display: none;
 }
 
-
-/* stlying for meow gpt svelte app */
 .iframe-container {
-    position: fixed; /* Use 'fixed' to position it relative to the viewport */
-    bottom: 20px; /* Position it at the bottom */
-    right: 20px; /* Position it to the right */
-    height: 725px; /* Adjust the height as needed */
-    z-index: 2; /* Ensure it's above other elements */
-    overflow-y: auto; /* Add vertical scroll if content exceeds container height */
-    width: 500px; /* Adjust the width as needed */
-    border-radius: 10px; /* Add border-radius for rounded corners */
-    box-shadow: 0 0 10px rgba(0,0,0,0.5); /* Add shadow for floating effect */
-    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    position: fixed;
+    bottom: 0; /* Adjusted to ensure it's not cut off */
+    right: 0; /* Adjusted to ensure it's not cut off */
+    height: 80%; /* Increased height */
+    width: 50%; /* Increased width */
+    z-index: 2;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .iframe-container iframe {
-    width: 100%; /* Make the iframe take the full width of its container */
-    height: 100%; /* Make the iframe take the full height of its container */
-    border: none; /* Remove border */
-    border-radius: 10px; /* Add border-radius to iframe as well */
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
 }
+
 
 #toggle-chat-box {
     position: fixed;
