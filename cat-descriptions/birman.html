@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../script.js"></script>
+
+    <!-- for cursor -->
+    <style type='text/css'>
+        body, a:hover {
+            cursor: url(http://www.zingerbugimages.com/cursors/tuxedo_cat.ani), 
+                    url(http://www.zingerbug.com/cursors/cursors/tuxedo_cat.gif), 
+                    progress !important;
+        }
+    </style>
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,300&display=swap" rel="stylesheet">
+
+
+    <title>Cat Breed Recommendation App</title>
+    <link rel="stylesheet" href="style2.css"> <!-- Link to your CSS file -->
+</head>
+
+<body>
+   
+
+    <div class="intro">
+        <div class="logo-header">
+            <h4>
+                <h1><span class="bold">Cat</span> <span class="regular">Breeds</span> </h1>
+            </h4>
+            <a href="../index.html" class="discover-button">Discover More</a> <!-- Updated class name -->
+        </div>
+    </div>
+
+
+
+
+
+    <div class="cat-breed-container">
+        <div class="cat-image-container">
+            <img src="../images/birman2.jpg" id="myImg" alt="Birman" class="cat-image modal-opener">
+        </div>
+        
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+        </div>
+
+
+        
+
+        <div class="cat-info-container">
+            <h1 class="breed-name">Birman Cat</h1>
+            <div class="breed-info">
+                <p>
+                    The Birman, like other "color point" cats, displays a soft, pale cream to white coat covering its body, while its face, ears, legs, and tail 
+                    showcase colored points. This semi-long-haired feline boasts a luxuriously silky coat, striking blue eyes, and pristine white feet, featuring 
+                    gloves on the front paws and socks on the back 
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <div class="info-box">
+                <h2>Key Facts</h2>
+                <ul>
+                    <li>Size: Medium</li>
+                    <li>Coat: Medium/Large</li>
+                    <li>Behaviour: Friendly, Playful</li>
+                    <!-- Add more key facts as needed -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="facets-container">
+        <div class="facet-box">
+            <h3>Temperament</h3>
+            <p>Friendly, Playful</p>
+        </div>
+        <div class="facet-box">
+            <h3>Coat</h3>
+            <p>Medium/Large</p>
+        </div>
+        <div class="facet-box">
+            <h3>Size</h3>
+            <p>Medium</p>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="need-to-know-container">
+        <h2>The Need-to-Know</h2>
+        <ul>
+            <li>Great for first time cat owners</li>
+            <li>Can be left alone all day</li>
+            <li>Highly active and curious cat</li>
+            <li>Sociable and dependent</li>
+        </ul>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="personality-container">
+        <div class="cat-image-container">
+            <img src="../images/balinese3.jpg" alt="Bengal" class="cat-image modal-opener">
+        </div>
+
+        <div class="personality-info-container">
+            <h2>Personality</h2>
+            <p>
+                Thanks to their extensive history of selective breeding aimed at creating an ideal companion cat, the Birman is an exceptionally amiable, easygoing, 
+                and tranquil pet. Birmans thoroughly enjoy human company, delight in play, and typically lack a strong hunting instinct. They tend to be quite sociable 
+                and can establish positive relationships with other cats and dogs if they are properly socialized and introduced thoughtfully. Although they are not inherently 
+                vocal or noisy, Birmans can be quietly conversational.
+            </p>
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="health-info-container">
+        <div class="health-info-header">
+            <i class="info-icon">i</i>
+            <h3>Generally Healthy Breed <span id="toggle-icon">+</span></h3>
+        </div>
+        <div class="health-info-content" id="health-info-content">
+            <p>The Birman cat breed may be prone to:</p>
+            <ul>
+                <li>Hypertrophic cardiomyopathy which is a disease were the heart muscle becomes abnormally thick which means the heart cannot beat effectively. </li>
+                <li> Polycystic kidney disease which is an inherited condition where cysts form in the kidneys. This affects kidney function and can eventually lead to kidney failure. However, 
+                    it is worth noting that the risk of developing this disease in this breed is lower than in other cat breeds that are prone to the problem. </li>
+                <li>Hypotrichosis which is a condition where areas of fur do not grow and this can result in skin infections. </li>
+            </ul>
+            <p>Testing available:</p>
+            <p> DNA testing for polycystic kidney disease which tests whether or not a cat has the potential to be affected by this condition.</p>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="dropdowns-container">
+
+        <div class="dropdown" onclick="toggleDropdown('vetRating')">
+            <h3 id="vetRating-title" class="red-font">Vet Rating <span id="vetRating-icon">+</span></h3>
+            <div class="dropdown-content" id="vetRating-content" style="display: none;">
+                <table class="ratings-table">
+                    <tr>
+                        <td>Family-friendly:</td>
+                        <td>5/5</td>
+                    </tr>
+                    <tr>
+                        <td>Playfulness:</td>
+                        <td>4/5</td>
+                    </tr>
+                    <tr>
+                        <td>Intelligence:</td>
+                        <td>4/5</td>
+                    </tr>
+                    <tr>
+                        <td>Tendency to Vocalise:</td>
+                        <td>2/5</td>
+                    </tr>
+                    <tr>
+                        <td>Likes Other Pets:</td>
+                        <td>5/5</td>
+                    </tr>
+                    <tr>
+                        <td>Grooming Needs:</td>
+                        <td>2/5</td>
+                    </tr>
+                    <tr>
+                        <td>Shedding:</td>
+                        <td>3/5</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Repeat similar blocks for other titles -->
+        <div class="dropdown" onclick="toggleDropdown('historyOrigins')">
+            <h3 id="historyOrigins-title" class="red-font">History and Origins <span id="historyOrigins-icon">+</span>
+            </h3>
+            <div class="dropdown-content" id="historyOrigins-content" style="display: none;">
+                <p> The origins of the Birman breed are somewhat shrouded in mystery. According to legend, the captivating blue eyes of the Birman cat were 
+                    bestowed upon it as a reward for the unwavering love and dedication of a temple cat to its priest, who served a blue-eyed goddess. This 
+                    goddess also graced the Birman with a golden coat, while preserving its paws in pristine white as a symbol of purity.</p>
+            </div>
+        </div>
+
+        <div class="dropdown" onclick="toggleDropdown('outdoorIndoor')">
+            <h3 id="outdoorIndoor-title" class="red-font">Outdoors or Indoors <span id="outdoorIndoor-icon">+</span>
+            </h3>
+            <div class="dropdown-content" id="outdoorIndoor-content" style="display: none;">
+                <p> The ideal environment for this cat includes a secure garden or an outdoor enclosure. While they can thrive indoors in a spacious house, 
+                    those with smaller homes may want to explore options like cat-proofing the garden or constructing a dedicated "catio." Discover helpful 
+                    tips on how to cat-proof your garden by referring to our informative article.
+                </p>
+            </div>
+        </div>
+
+
+        <div class="dropdown" onclick="toggleDropdown('enrichmentNeeds')">
+            <h3 id="enrichmentNeeds-title" class="red-font">Enrichment and Specific Needs <span id="enrichmentNeeds-icon">+</span>
+            </h3>
+            <div class="dropdown-content" id="enrichmentNeeds-content" style="display: none;">
+                <p> Birmans have a strong desire to participate in your activities, and some may opt for a supervisory role, closely observing your every move. 
+                    Others may choose a more hands-on approach, which can involve sitting on paperwork and occasionally "borrowing" pens, small tools, or components. 
+                    To channel their helpful nature effectively, ensure ample playtime, especially with interactive cat toys that dispense food, instead of serving all 
+                    their meals from a traditional bowl.</p>
+            </div>
+        </div>
+
+
+        <div class="dropdown" onclick="toggleDropdown('nutrition')">
+            <h3 id="nutrition-title" class="red-font">Nutrition and Feeding <span id="nutrition-icon">+</span>
+            </h3>
+            <div class="dropdown-content" id="nutrition-content" style="display: none;">
+                <p> Every cat is unique, with specific food preferences and requirements. Cats are obligate carnivores, requiring 41 distinct nutrients from their food. 
+                    The nutrient balance varies with age, lifestyle, and health, so kittens have different dietary needs than senior cats. It's important to feed the 
+                    appropriate amount for maintaining an "ideal body condition" following feeding guidelines and catering to their preference for wet or dry cat food. 
+                    Discover further insights on cat feeding guidelines in our article.</p>
+            </div>
+        </div>
+
+        <div class="dropdown" onclick="toggleDropdown('grooming')">
+            <h3 id="grooming-title" class="red-font">Grooming <span id="grooming-icon">+</span>
+            </h3>
+            <div class="dropdown-content" id="grooming-content" style="display: none;">
+                <p> The Birman cat boasts a soft and silky coat that is generally more manageable than that of a Persian. Nevertheless, maintaining its luster entails 
+                    a weekly cat grooming routine using a comb and brush. Birmans groomed from an early age tend to appreciate the added human attention that this regular 
+                    practice offers. It's essential to be aware that a greasy coat may signal that your cat has ceased self-grooming, potentially indicating health issues. 
+                    As with all cats, Birmans benefit from regular vaccinations, parasite control, and an annual veterinary check-up to safeguard their well-being.</p>
+            </div>
+        </div>
+
+
+        <div class="dropdown" onclick="toggleDropdown('suitability')">
+            <h3 id="suitability-title" class="red-font">Suitability for Family Life <span id="suitability-icon">+</span>
+            </h3>
+            <div class="dropdown-content" id="suitability-content" style="display: none;">
+                <p> The Birman can be an excellent and loving family pet for those with children who can demonstrate respect for a cat's boundaries and adhere to guidelines. 
+                    It's important to keep in mind that this breed requires a considerable amount of attention, playtime, and grooming. Take a moment to evaluate whether you 
+                    can dedicate the necessary time to fulfill these needs.
+                </p>
+            </div>
+        </div>
+
+        <!-- Add similar blocks for the rest of the titles -->
+        <!-- ... -->
+
+    </div>
+
+
+
+
+
+</body>
+
+
+</html>
