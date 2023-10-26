@@ -6,9 +6,12 @@
 }
 
 /* Ensure the pointer cursor appears on clickable elements */
-a, button, [role="button"], [type="submit"], [type="reset"], [type="button"], .clickable {
+a, button, [onclick], .modal-opener {
     cursor: pointer !important;
 }
+
+
+
 
 
 
