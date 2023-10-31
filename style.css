@@ -389,3 +389,16 @@ p.summary {
 .active-filter {
     background-color: #ddd; /* or any other style to highlight the button */
 }
+
+#pagination {
+    text-align: center; /* Center the buttons horizontally */
+    width: 100%; /* Take up the full width of its parent */
+    margin: 20px 0; /* Add some vertical spacing */
+    clear: both; /* Clear any floats */
+}
+
+#pagination button {
+    display: inline-block; /* Make the buttons inline-level blocks */
+    margin: 0 10px; /* Add some horizontal spacing between the buttons */
+}
+

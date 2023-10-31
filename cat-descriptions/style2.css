@@ -512,16 +512,18 @@ a, button, [onclick], .modal-opener {
 
 
 
-
-
-
 /* Styles for the container holding the dropdown sections */
 
 .dropdowns-container {
     max-width: 1000px; /* Reduced from 1200px to 1000px */
     margin: 10px auto; /* Reduced top and bottom margin */
     padding: 10px; /* Reduced padding */
+
+
+
 }
+
+
 
 
 /* Styles for the individual dropdown sections */
@@ -531,6 +533,8 @@ a, button, [onclick], .modal-opener {
     border-radius: 10px;
     overflow: hidden;
 
+
+    
 
 }
 
@@ -545,6 +549,13 @@ a, button, [onclick], .modal-opener {
     cursor: pointer;
     margin: 0;
     background-color: #f0f0f0;
+
+    /* box-shadow: 0 0 15px #0abcad, 
+    0 0 25px #0abcad, 
+    0 0 35px #0abcad, 
+    0 0 45px #0abcad; */
+    
+    
 }
 
 .dropdown-content {
